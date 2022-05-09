@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<!--
+  Based on the Massively template by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Rappy Words Beta Web App</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="javascript:handleStartNewGame();" class="logo" id="game--start">Play Rappy Words</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">Play Page</a></li>
+							<li><a href="#instructions">Learn How to Play</li>
+							<li><a href="about.html">About the creators</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- presentation space for words and questions plus buttons to answer and advance turns -->
+						<div class="row gtr-uniform">
+							<div class="col-6 col-12-xsmall">
+									
+									<img class="img mic" id="team--A--pic" src="images/overlay.png" width="30px" height="30px">
+									
+
+								<h3 class="turn--status"></h3>
+								<h3 class="game--status"></h3>
+								
+								<img class="img mic" id="team--B--pic" src="images/overlay.png" width="30px" height="30px">
+
+								<h3 class="rhyme--prompt">the word to rhyme is: </h3><h2 class="word--to--rhyme"></h3>
+
+								<h4 class="countdown"></h4>
+                <h4 class="scoring--feedback"></h4>
+							</div>
+								<div class="col-6 col-12-xsmall">
+                  <!-- buttons to submit answers and points for each turn -->
+									<p><button class="add--to--score">add rhyme to score</button>
+									<button class="pass--turn">pass for this turn</button></p>
+               						<p><input type="radio" id="trivia--A" name="trivia--abcd" checked>
+									<label for="trivia--A">A</label>
+									<input type="radio" id="trivia--B" name="trivia--abcd">
+									<label for="trivia--B">B</label>
+									<input type="radio" id="trivia--C" name="trivia--abcd">
+									<label for="trivia--C">C</label>
+									<input type="radio" id="trivia--D" name="trivia--abcd">
+									<label for="trivia--D">D</label>
+									<button class="submit--question--answer">submit A, B, C, or D answer</button></p>
+
+									<p>Notice a mistake? Adjust score to: <input type="text" name="overwrite--score" class="overwrite--score" id="overwrite--score" value="" placeholder="type amount here" /></p>
+									<button class="update--A--score">Update This Score</button>
+									<button class="update--B--score">Update That Score</button>
+							</div>
+
+						<div class="col-6 col-12-xsmall">
+							<!-- section for selecting the type of round to play -->
+							<h3>Pick your play for this round</h3>
+							<ul class="actions stacked">
+									<li><button class="random--easy--word button">Get an Easy Word</button>
+									<button class="random--medium--word button">Get a Medium Word</button></li>
+									<li><button class="random--hard--word button">Get a Hard Word</button>
+									<button class="ask--questions button">Get Trivia Questions</button></li>
+								<!-- Team A = This Team; Team B = That team even though players can rename -->
+								Total score for This Team: <input type="text" name="team--A--score" class="team--A--score" id="team--A--score" value="" placeholder="0" size="4">
+								Total score for That Team: <input type="text" name="team--B--score" class="team--B--score" id="team--B--score" value="" placeholder="0" size="4">
+
+								<h3>customize game play</h3>
+								<button class="set--time">Reset with options below</button>
+								<p>Number of seconds per round: <input type="text" name="round--time" class="round--time" value="60" id="round--time">
+								Nickname This team: (<15 letters)<input type="text" name="this--team" class="this--team" id="this--team" value="Team A" />
+								Nickname That team: (<15 letters)<input type="text" name="that--team" class="that--team" id="that--team" value="Team B" /></p>
+								<p><input type="radio" id="use--modern" name="questions--to--use" checked>
+								<label for="use--modern">Get questions about modern songs</label>
+								<input type="radio" id="include--old--school" name="questions--to--use">
+								<label for="include--old--school">Get questions about Hip-Hop classics or modern songs</label></p>
+								<p>Add easy words here: <input type="text" name="easyWords--to--add" class="easyWords--to--add" id="easyWords--to--add" value="" placeholder="separate words with commas" />
+								Add medium words here: <input type="text" name="mediumWords--to--add" class="mediumWords--to--add" id="mediumWords--to--add" value="" placeholder="separate words with commas" />
+								Add hard words here: <input type="text" name="hardWords--to--add" class="hardWords--to--add" id="hardWords--to--add" value="" placeholder="separate words with commas" /></p>
+								<p><input type="radio" id="use--builtins" name="words--to--use" checked>
+								<label for="use--builtins">Get words from the built-in library only</label>
+								<input type="radio" id="include--added--words" name="words--to--use">
+								<label for="include--added--words">Get words from built-in library OR user added lists</label>
+								<input type="radio" id="added--words--only" name="words--to--use">
+								<label for="added--words--only">Get words only from user added lists</label></p>
+						</div>
+						<div class="col-6 col-12-xsmall">
+              <!-- rules for playing the game and scoring -->
+							<ul class="actions">
+								<li><input type="reset" value="Reset to New Game" class="reset" /></li>
+							</ul>
+							<ol>
+								<li><b><a id="instructions">TO PLAY:</a></b></li>
+								<li>Pick captains, they'll pick players.
+								<li>Captains choose to get easy, medium, or hard words to rhyme.
+								<li>In order of 1st picked to last, each player
+									<ul><li>makes a sentence ending with a rhyme of the word.
+									<li>or says "skip", then passes the mic til time's up.</li>
+									<li>rhyme for easy words get 1 point, medium words get 2, hard words get 3.
+									<li>points are added when a player presses the button to count them or pass.
+									<li>a team gets an extra rhyme score added at the end of the round if more than 2 players do rhymes back to back, and no one passes.</ul>
+								<li>Or a captain can choose to do trivia questions, where each player:
+									<ul><li>submits an answer, then the next player does until time's up.
+									<li>correct answers give a team 2 points.
+									<li> incorrect answers take away a point.
+									<li>a team gets a bonus streak for a round when it has no incorrect answers.</ul>
+								<li>The game ends after 3 rounds.
+									<li>The team with the most points wins.
+										<li>Players can customize elements of the game and/or adjust score discrepencies uing the prompts on the screen.
+							</ol>
+						</div>
+				</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="contact">
+							<section class="alt">
+								<h3>Brought to you by <a href="https://www.stemcees.com">STEMcees</a></p></h3>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; STEMcees 2021</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div> <!-- ends main section -->
+    </div>
+
+		<!-- Scripts -->
+			<!-- The core Firebase JS SDK is always required and must be listed first -->
+			<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+      <!-- The scripts that allow connection to the realtime database -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+			<!-- The link that allows google analytics to monitor database activity -->
+			<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+      <!-- scripts that allow the massively template to work -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+      <!-- the script that runs the game engine -->
+			<script src="assets/js/rappywords.js"></script>
+	</body>
+</html>

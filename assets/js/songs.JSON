@@ -1,0 +1,30 @@
+{
+  "songs" : [
+  {"title" : "Jesus Walks", "artist" : "Kanye West"},
+  {"title" : "Gold Digger", "artist" : "Kanye West"},
+  {"title" : "Good Life", "artist" : "Kanye West"},
+  {"title" : "Stronger", "artist" : "Kanye West"},
+  {"title" : "Straightenin", "artist" : "Migos"},
+  {"title" : "Walk It Talk It", "artist" : "Migos"},
+  {"title" : "Narcos", "artist" : "Migos"},
+  {"title" : "Stir Fry", "artist" : "Migos"},
+  {"title" : "Go Crazy", "artist" : "Young Thug"},
+  {"title" : "Ski", "artist" : "Young Thug"},
+  {"title" : "Solid", "artist" : "Young Thug"},
+  {"title" : "The London", "artist" : "Young Thug"},
+  {"title" : "One Way Flight", "artist" : "Benny The Butcher"},
+  {"title" : "Plug Talk", "artist" : "Benny The Butcher"},
+  {"title" : "Crowns for Kings", "artist" : "Benny The Butcher"},
+  {"title" : "Overall", "artist" : "Benny The Butcher"},
+  {"title" : "Finer Things", "artist" : "Polo G"},
+  {"title" : "Riding With it", "artist" : "G Herbo"},
+  {"title" : "Faneto", "artist" : "Chief Keef"},
+  {"title" : "Movie", "artist" : "Sleepy Hallow"},
+  {"title" : "Flows", "artist" : "Sheff G"},
+  {"title" : "Top 5", "artist" : "Bizzy Banks"},
+  {"title" : "Zayski", "artist" : "Vory"},
+  {"title" : "Dope House", "artist" : "Dave East"},
+  {"title" : "Welcome to the Party", "artist" : "Pop Smoke"},
+  {"title" : "No Parties", "artist" : "Coi Leray"}
+  ]
+}
